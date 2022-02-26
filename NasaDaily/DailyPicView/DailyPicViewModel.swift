@@ -20,7 +20,7 @@ class DailyPicViewModel: ObservableObject {
     @Published var errorMessage: Error?
     @Published var dailyPicModel: DailyPicModel?
     
-    @Published var tabIndex: Int = 2
+    @Published var tabIndex: Int = 1
     //Temporary - If There are more fields this is not saved here
     @Published var dateField: Field
     @Published var lastOnlineTime: Date
