@@ -9,9 +9,10 @@
 
 ### Screenshots
 
-![Screenshot1](snapshots/nasadaily.pdf)
-![Screenshot2](snapshots/screen3.jpg)
-![Screenshot3](snapshots/screen2.jpg)
-![Screenshot4](snapshots/screen1.jpg)
+![Screenshot](snapshots/logo.jpg)
+
+![Screenshot2](snapshots/screen3.jpeg)
+![Screenshot3](snapshots/screen2.jpeg)
+![Screenshot4](snapshots/screen1.jpeg)
 
 Thank You :)
