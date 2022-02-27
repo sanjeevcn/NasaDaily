@@ -7,4 +7,11 @@
 - There is no additonal setup to be done inorder to run app on simulator.
 - You will have to change the bundle identifier to run on a physical device.
 
+### Screenshots
+
+![Screenshot](screenshots/nasadaily.pdf)
+![Screenshot](screenshots/screen3.jpg)
+![Screenshot](screenshots/screen2.jpg)
+![Screenshot](screenshots/screen1.jpg)
+
 Thank You :)
