@@ -13,10 +13,8 @@ class DataManager: ObservableObject {
     
     static let shared = DataManager()
     
-    private let containerName = "NasaDaily"
-    
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: containerName)
+        let container = NSPersistentContainer(name: Constants.containerName)
         container.loadPersistentStores { (storeDescription, error) in
             if let error = error {
                 fatalError("Unresolved error: \(error.localizedDescription)")
@@ -34,7 +32,7 @@ class DataManager: ObservableObject {
         if context.hasChanges {
             do {
                 try context.save()
-                debugPrint("Saved")
+                debugPrint("Data Saved")
             } catch {
                 let nserror = error as NSError
                 print("Unresolved error \(nserror), \(nserror.userInfo)")

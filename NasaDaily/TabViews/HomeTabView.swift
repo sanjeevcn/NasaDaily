@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct CustomTabView: View {
-    @EnvironmentObject var viewModel: DailyPicViewModel
+struct HomeTabView: View {
+    @EnvironmentObject var viewModel: NasaDailyViewModel
     var body: some View {
         NavigationView {
             TabView(selection: $viewModel.tabIndex) {
@@ -18,7 +18,7 @@ struct CustomTabView: View {
                     })
                     .tag(1)
                 
-                FavoritesListView()
+                FavoritesTabView()
                     .tabItem({
                         Label("Favorites", systemImage: "star.circle.fill")
                     })

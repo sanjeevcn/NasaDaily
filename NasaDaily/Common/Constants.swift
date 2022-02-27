@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Constants {
+    static var containerName = "NasaDaily"
     static var appName = "NasaDaily"
     static var appDescription = ""
 }

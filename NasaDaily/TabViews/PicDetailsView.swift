@@ -10,7 +10,7 @@ import SwiftUI
 struct PicDetailsView: View {
     @Binding var model: DailyPicModel?
     @ObservedObject var dataManager: DataManager = .shared
-    @EnvironmentObject var viewModel: DailyPicViewModel
+    @EnvironmentObject var viewModel: NasaDailyViewModel
     
     init(_ dailyPicModel: Binding<DailyPicModel?>) {
         self._model = dailyPicModel
@@ -25,24 +25,8 @@ struct PicDetailsView: View {
                     .multilineTextAlignment(.center)
                     .frame(height: 100)
                 
-                AsyncImage(url: imageUrl) { image in
-                    image
-                        .resizable()
-                        .scaledToFit()
-                        .cornerRadius(8)
-                        .frame(maxWidth: .deviceWidth)
-                } placeholder: {
-                    ZStack {
-                        Color.accentColor.opacity(0.1)
-                            .cornerRadius(8)
-                        ProgressView().scaleEffect(1.0, anchor: .center)
-                        Text("Somedays it just loads faster..")
-                            .foregroundColor(.accentColor.opacity(0.5))
-                            .offset(x: 0, y: 50)
-                    }.frame(height: 300)
-                }
-                .frame(idealHeight: 300)
-                .padding(.horizontal)
+                CustomAsyncImage(imageUrl, size: 300, text: "Somedays it just loads faster..")
+                    .padding(.horizontal)
                 
                 VStack(spacing: 10) {
                     if let copyright = model.copyright {
@@ -93,24 +77,8 @@ struct FavoriteDetailView: View {
                         .multilineTextAlignment(.center)
                         .frame(height: 100)
                     
-                    AsyncImage(url: imageUrl) { image in
-                        image
-                            .resizable()
-                            .scaledToFit()
-                            .cornerRadius(8)
-                            .frame(maxWidth: .deviceWidth)
-                    } placeholder: {
-                        ZStack {
-                            Color.accentColor.opacity(0.1)
-                                .cornerRadius(8)
-                            ProgressView().scaleEffect(1.0, anchor: .center)
-                            Text("Somedays it just loads faster..")
-                                .foregroundColor(.accentColor.opacity(0.5))
-                                .offset(x: 0, y: 50)
-                        }.frame(height: 300)
-                    }
-                    .frame(idealHeight: 300)
-                    .padding(.horizontal)
+                    CustomAsyncImage(imageUrl, size: 300, text: "Somedays it just loads faster..")
+                        .padding(.horizontal)
                     
                     VStack(spacing: 10) {
                         if let copyright = model.copyright {

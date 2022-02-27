@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AlertViewModifier: ViewModifier {
 
-    @ObservedObject var viewModel: DailyPicViewModel = .shared
+    @ObservedObject var viewModel: NasaDailyViewModel = .shared
     
     @Environment(\.dismiss) var dismiss
     

@@ -10,9 +10,9 @@ import Foundation
 enum ActiveAlert { case custom(_ message: String) }
 
 @MainActor
-class DailyPicViewModel: ObservableObject {
+class NasaDailyViewModel: ObservableObject {
     
-    static let shared = DailyPicViewModel()
+    static let shared = NasaDailyViewModel()
     
     @Published var dataManager: PersistenceContainer
     @Published var activeAlert: ActiveAlert?
@@ -23,7 +23,7 @@ class DailyPicViewModel: ObservableObject {
     @Published var tabIndex: Int = 1
     //Temporary - If There are more fields this is not saved here
     @Published var dateField: Field
-    @Published var lastOnlineTime: Date
+    @Published var lastOnlineTime: Date?
     
     init() {
         self.isLoading = false
@@ -33,11 +33,11 @@ class DailyPicViewModel: ObservableObject {
         self.dataManager = .shared
         self.dateField = .init(name: "Date", type: .date)
         
-        self.lastOnlineTime = Date()
+        self.lastOnlineTime = nil
     }
 }
 
-extension DailyPicViewModel: ServiceHandler {
+extension NasaDailyViewModel: ServiceHandler {
     
     func fetchPicOfTheDay(for date: String) async {
         guard dateField.value.isValidDate else {

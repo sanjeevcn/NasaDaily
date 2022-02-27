@@ -10,13 +10,13 @@ import SwiftUI
 @main
 struct NasaDailyApp: App {
     @ObservedObject var dataManager: PersistenceContainer = .shared
-    @ObservedObject var model: DailyPicViewModel = .shared
+    @ObservedObject var model: NasaDailyViewModel = .shared
     
     @Environment(\.scenePhase) private var scenePhase
     
     var body: some Scene {
         WindowGroup {
-            CustomTabView()
+            HomeTabView()
                 .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
                 .environmentObject(model)
                 .environment(\.managedObjectContext, dataManager.context)

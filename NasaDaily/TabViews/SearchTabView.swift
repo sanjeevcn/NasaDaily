@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct SearchTabView: View {
-    @EnvironmentObject var viewModel: DailyPicViewModel
+    @EnvironmentObject var viewModel: NasaDailyViewModel
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack {
                 topSearchView()
+                    .padding(.all)
                 
                 if viewModel.dailyPicModel != nil {
                     PicDetailsView($viewModel.dailyPicModel)
@@ -28,23 +29,27 @@ struct SearchTabView: View {
     
     func topSearchView() -> some View {
         ZStack {
-            Color.accentColor
-                .opacity(0.2)
+            Color.yellow
+                .opacity(0.1)
+                .cornerRadius(10)
             
             VStack(spacing: 10) {
                 DateTextField(data: $viewModel.dateField)
-                    .padding()
+                    .padding(.vertical)
+                    .padding(.horizontal, 5)
                 
-                Button("Get pic of the day") {
+                Button("Get Picture") {
                     Task {
                         await viewModel.fetchPicOfTheDay(for: viewModel.dateField.value)
                     }
                 }.buttonStyle(RoundedButtonStyle())
                 
-                Text("Last Online: \(viewModel.lastOnlineTime, formatter: Self.dateFormat)")
-                    .font(.footnote)
-                    .foregroundColor(.secondary)
-                    .padding()
+                if let onlineTime = viewModel.lastOnlineTime {
+                    Text("Last Online: \(onlineTime, formatter: Self.dateFormat)")
+                        .font(.footnote)
+                        .foregroundColor(.secondary)
+                        .padding()
+                }
             }.padding()
         }
     }
@@ -56,10 +61,10 @@ struct SearchTabView: View {
     }()
     
     func todayButton() -> some View {
-        Button("Todays Pic") {
+        Button("Today's Picture") {
             Task {
                 await viewModel.fetchTodaysPicOfTheDay()
             }
-        }.buttonStyle(RoundedButtonStyle(200, color: .gray))
+        }.buttonStyle(RoundedButtonStyle(200, color: .yellow))
     }
 }

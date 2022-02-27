@@ -21,7 +21,7 @@
 		AF8B912727CA124600FC53C3 /* NavigationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8B912627CA124600FC53C3 /* NavigationModifier.swift */; };
 		AF8B912927CA128700FC53C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8B912827CA128700FC53C3 /* Constants.swift */; };
 		AF8B912B27CA137200FC53C3 /* DailyPicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8B912A27CA137200FC53C3 /* DailyPicModel.swift */; };
-		AF8B912D27CA13BB00FC53C3 /* DailyPicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8B912C27CA13BB00FC53C3 /* DailyPicViewModel.swift */; };
+		AF8B912D27CA13BB00FC53C3 /* NasaDailyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8B912C27CA13BB00FC53C3 /* NasaDailyViewModel.swift */; };
 		AF8B912F27CA143D00FC53C3 /* FormattedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8B912E27CA143D00FC53C3 /* FormattedData.swift */; };
 		AF8B913127CA150800FC53C3 /* ServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8B913027CA150800FC53C3 /* ServiceHandler.swift */; };
 		AF8B913327CA153300FC53C3 /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8B913227CA153300FC53C3 /* ApiEndpoint.swift */; };
@@ -32,7 +32,7 @@
 		AFB486C927CAA8FF00A62E8A /* NasaDaily.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFB486C727CAA8FE00A62E8A /* NasaDaily.xcdatamodeld */; };
 		AFB486CF27CAAAD500A62E8A /* FavoritePics.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB486CE27CAAAD500A62E8A /* FavoritePics.swift */; };
 		AFB486D127CAAB6B00A62E8A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB486D027CAAB6B00A62E8A /* DataManager.swift */; };
-		AFB486D327CAC14900A62E8A /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB486D227CAC14900A62E8A /* CustomTabView.swift */; };
+		AFB486D327CAC14900A62E8A /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB486D227CAC14900A62E8A /* HomeTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +70,7 @@
 		AF8B912627CA124600FC53C3 /* NavigationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModifier.swift; sourceTree = "<group>"; };
 		AF8B912827CA128700FC53C3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AF8B912A27CA137200FC53C3 /* DailyPicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPicModel.swift; sourceTree = "<group>"; };
-		AF8B912C27CA13BB00FC53C3 /* DailyPicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPicViewModel.swift; sourceTree = "<group>"; };
+		AF8B912C27CA13BB00FC53C3 /* NasaDailyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaDailyViewModel.swift; sourceTree = "<group>"; };
 		AF8B912E27CA143D00FC53C3 /* FormattedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedData.swift; sourceTree = "<group>"; };
 		AF8B913027CA150800FC53C3 /* ServiceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHandler.swift; sourceTree = "<group>"; };
 		AF8B913227CA153300FC53C3 /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
@@ -81,8 +81,8 @@
 		AFB486C627CAA4A900A62E8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AFB486C827CAA8FF00A62E8A /* NasaDaily.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NasaDaily.xcdatamodel; sourceTree = "<group>"; };
 		AFB486CE27CAAAD500A62E8A /* FavoritePics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePics.swift; sourceTree = "<group>"; };
-		AFB486D027CAAB6B00A62E8A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = Common/DataManager.swift; sourceTree = "<group>"; };
-		AFB486D227CAC14900A62E8A /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		AFB486D027CAAB6B00A62E8A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		AFB486D227CAC14900A62E8A /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,25 +129,23 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		AF45B35027CA61C600E62EF5 /* DailyPicView */ = {
+		AF45B35027CA61C600E62EF5 /* TabViews */ = {
 			isa = PBXGroup;
 			children = (
-				AF8B912A27CA137200FC53C3 /* DailyPicModel.swift */,
-				AF8B912C27CA13BB00FC53C3 /* DailyPicViewModel.swift */,
 				AF8B90FA27CA0DAF00FC53C3 /* SearchTabView.swift */,
 				AF514D8E27CAD4B1003740E3 /* FavoritesTabView.swift */,
-				AFB486D227CAC14900A62E8A /* CustomTabView.swift */,
+				AFB486D227CAC14900A62E8A /* HomeTabView.swift */,
 				AF45B34C27CA553000E62EF5 /* PicDetailsView.swift */,
-				AFB486C727CAA8FE00A62E8A /* NasaDaily.xcdatamodeld */,
 			);
-			path = DailyPicView;
+			path = TabViews;
 			sourceTree = "<group>";
 		};
 		AF45B35127CA620900E62EF5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				AF8B913627CA186800FC53C3 /* ViewModifiers */,
+				AF45B34F27CA61BA00E62EF5 /* Components */,
 				AF8B912827CA128700FC53C3 /* Constants.swift */,
-				AFB486CE27CAAAD500A62E8A /* FavoritePics.swift */,
 				AF8B913B27CA1F3200FC53C3 /* Field.swift */,
 			);
 			path = Common;
@@ -178,12 +176,11 @@
 			children = (
 				AFB486C627CAA4A900A62E8A /* Info.plist */,
 				AF8B90F827CA0DAF00FC53C3 /* NasaDailyApp.swift */,
-				AFB486D027CAAB6B00A62E8A /* DataManager.swift */,
-				AF8B913627CA186800FC53C3 /* ViewModifiers */,
+				AFAB998A27CBFC4E00F98FF8 /* DataModels */,
 				AF45B35127CA620900E62EF5 /* Common */,
-				AF45B34F27CA61BA00E62EF5 /* Components */,
 				AF45B34E27CA618500E62EF5 /* Services */,
-				AF45B35027CA61C600E62EF5 /* DailyPicView */,
+				AFAB998B27CBFC9400F98FF8 /* ViewModels */,
+				AF45B35027CA61C600E62EF5 /* TabViews */,
 				AF8B90FC27CA0DBF00FC53C3 /* Assets.xcassets */,
 				AF8B90FE27CA0DBF00FC53C3 /* Preview Content */,
 			);
@@ -224,6 +221,25 @@
 				AF8B912427CA11B900FC53C3 /* PopupModifier.swift */,
 			);
 			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		AFAB998A27CBFC4E00F98FF8 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				AFB486CE27CAAAD500A62E8A /* FavoritePics.swift */,
+				AFB486C727CAA8FE00A62E8A /* NasaDaily.xcdatamodeld */,
+				AFB486D027CAAB6B00A62E8A /* DataManager.swift */,
+				AF8B912A27CA137200FC53C3 /* DailyPicModel.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		AFAB998B27CBFC9400F98FF8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AF8B912C27CA13BB00FC53C3 /* NasaDailyViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,7 +379,7 @@
 				AF8B912527CA11B900FC53C3 /* PopupModifier.swift in Sources */,
 				AF45B34D27CA553000E62EF5 /* PicDetailsView.swift in Sources */,
 				AF8B913C27CA1F3200FC53C3 /* Field.swift in Sources */,
-				AFB486D327CAC14900A62E8A /* CustomTabView.swift in Sources */,
+				AFB486D327CAC14900A62E8A /* HomeTabView.swift in Sources */,
 				AF514D8F27CAD4B2003740E3 /* FavoritesTabView.swift in Sources */,
 				AF8B912727CA124600FC53C3 /* NavigationModifier.swift in Sources */,
 				AF8B913527CA163E00FC53C3 /* CustomError.swift in Sources */,
@@ -371,7 +387,7 @@
 				AF8B913E27CA249D00FC53C3 /* ButtonStyleModifier.swift in Sources */,
 				AF8B912B27CA137200FC53C3 /* DailyPicModel.swift in Sources */,
 				AF8B913327CA153300FC53C3 /* ApiEndpoint.swift in Sources */,
-				AF8B912D27CA13BB00FC53C3 /* DailyPicViewModel.swift in Sources */,
+				AF8B912D27CA13BB00FC53C3 /* NasaDailyViewModel.swift in Sources */,
 				AFB486D127CAAB6B00A62E8A /* DataManager.swift in Sources */,
 				AF8B912327CA118300FC53C3 /* AlertViewModifier.swift in Sources */,
 				AF8B912927CA128700FC53C3 /* Constants.swift in Sources */,
