@@ -4,12 +4,7 @@
  The App uses NASA’s open APIs ( https://api.nasa.gov/ ) and in particular, the APOD ( Astronomy picture of the day ) resource to fetch the data from the service.
 
 ### Steps To Run: 
-- There is no additonal setup to be done inorder to run app on simulator.
+- There is no additonal setup to be done in order to run app on a simulator.
 - You will have to change the bundle identifier to run on a physical device.
 
 Thank You :)
-
-
-### Screenshots
-
-![Screenshot2](snapshots/screen3.jpeg)
