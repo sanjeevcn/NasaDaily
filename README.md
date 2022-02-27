@@ -7,12 +7,9 @@
 - There is no additonal setup to be done inorder to run app on simulator.
 - You will have to change the bundle identifier to run on a physical device.
 
+Thank You :)
+
+
 ### Screenshots
 
-![Screenshot](snapshots/logo.jpg)
-
 ![Screenshot2](snapshots/screen3.jpeg)
-![Screenshot3](snapshots/screen2.jpeg)
-![Screenshot4](snapshots/screen1.jpeg)
-
-Thank You :)
